@@ -3,14 +3,17 @@ import java.util.*;
 class Input {
     public static void main(String[] args) {
         boolean run = true;
+
+        System.out.println("Welcome to the calculator!");
+        System.out.println("This program can do the basic operations found in a calculator");
+
         while (run) {
-            System.out.println("Welcome to the calculator!");
-            System.out.println("This program can do the basic operations found in a calculator");
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter the first number - ");
             int First = sc.nextInt();
             System.out.print("Enter the second number - ");
             int Second = sc.nextInt();
+
             int Add = First + Second;
             int Minus = First - Second;
             int Multiply = First * Second;
@@ -32,16 +35,20 @@ class Input {
             if (Input.equals("Division")) {
                 System.out.println("The division is " + Divide);
             }
+
             Scanner g = new Scanner(System.in);
-            System.out.print("Do you want to exit this program? (Yes/No) ");
+            System.out.print("Do you want to use this program again? (Yes/No) ");
             String Again = g.nextLine();
             if (Again.equals("Yes")) {
-                break;
+                continue;
             }
             if (Again.equals("No")) {
-                continue;
+                break;
 
             }
+            g.close();
+            a.close();
+            sc.close();
         }
     }
 }
